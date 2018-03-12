@@ -1,0 +1,21 @@
+[submodule "core"]
+	path = core
+	url = git@github.com:Lapiz-js/core.git
+[submodule "components/ajax"]
+	path = components/ajax
+	url = git@github.com:Lapiz-js/ajax.git
+[submodule "components/dragDrop"]
+	path = components/dragDrop
+	url = git@github.com:Lapiz-js/dragDrop.git
+[submodule "components/template"]
+	path = components/template
+	url = git@github.com:Lapiz-js/template.git
+[submodule "components/ui"]
+	path = components/ui
+	url = git@github.com:Lapiz-js/ui.git
+[submodule "components/validator"]
+	path = components/validator
+	url = git@github.com:Lapiz-js/validator.git
+[submodule "testing"]
+	path = testing
+	url = git@github.com:Lapiz-js/testing.git
