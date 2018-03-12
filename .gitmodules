@@ -19,3 +19,9 @@
 [submodule "testing"]
 	path = testing
 	url = git@github.com:Lapiz-js/testing.git
+[submodule "build"]
+	path = build
+	url = https://github.com/Lapiz-js/build.git
+[submodule "docs"]
+	path = docs
+	url = https://github.com/Lapiz-js/docs.git

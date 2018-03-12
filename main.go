@@ -63,6 +63,17 @@ func main() {
 		}
 	}
 
+	args := os.Args
+	if len(args) == 2 && args[1] == "build" {
+		if err := buildDirs(); err != nil {
+			panic(err)
+		}
+		if err := buildDocs(); err != nil {
+			panic(err)
+		}
+		return
+	}
+
 	min.AddFunc("js", js.Minify)
 
 	http.HandleFunc("/docs.css", docsCSS)
