@@ -55,7 +55,6 @@ func main() {
 		panic(err)
 	}
 
-	os.MkdirAll("docs", 0777)
 	for i, dir := range docDirs {
 		docDirs[i], err = filepath.Abs(dir)
 		if err != nil {
@@ -177,16 +176,17 @@ func buildDir(path, name string) error {
 }
 
 func buildDocs() error {
-	files, err := filepath.Glob("docs/*")
-	if err != nil {
-		return err
-	}
-	for _, file := range files {
-		err = os.RemoveAll(file)
-		if err != nil {
-			return err
-		}
-	}
+	// TODO: remove .md and sub dirs
+	// files, err := filepath.Glob("docs/*.md")
+	// if err != nil {
+	// 	return err
+	// }
+	// for _, file := range files {
+	// 	err = os.RemoveAll(file)
+	// 	if err != nil {
+	// 		return err
+	// 	}
+	// }
 
 	return goautodoc.DocumentDirectories("Lapiz", docDirs[0], docDirs[1:]...)
 }
