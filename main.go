@@ -62,6 +62,8 @@ func main() {
 		}
 	}
 
+	min.AddFunc("js", js.Minify)
+
 	args := os.Args
 	if len(args) == 2 && args[1] == "build" {
 		if err := buildDirs(); err != nil {
@@ -72,8 +74,6 @@ func main() {
 		}
 		return
 	}
-
-	min.AddFunc("js", js.Minify)
 
 	http.HandleFunc("/docs.css", docsCSS)
 	http.HandleFunc("/", mainCmd)
